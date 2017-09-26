@@ -1,9 +1,14 @@
+
+
 <ul>
-  <li *ngFor="let food of foods">
+  <li *ngFor="let food of foods | filtersearchfood:searchFood">
     <p>{{food.name}}</p>
     <p>{{food.calories}}</p>
     <p>{{food.quantity}}</p>
     <img src="{{food.image}}" width="400px" />
   </li>
 </ul>
+<input type="text" [(ngModel)]="searchFood">
+
+
 
